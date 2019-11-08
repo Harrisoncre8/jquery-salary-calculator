@@ -34,15 +34,15 @@ function addEmployee() {
     // run math function
 
     // run append function
-    appendEmployeeInfo();
+    appendEmployeeInfo(employeeArray);
 }// end addEmployee function
 
 // append inputs to DOM function
-function appendEmployeeInfo() {
-    // empty out table
+function appendEmployeeInfo(array) {
+    // empty out tabler
     $('#salary-table').empty();
     // loop through array for values and append them
-    for (employee of employeeArray){
+    for (employee of array){
         $('#salary-table').append(
             `<tr>
                 <td>${employee.firstName}</td>
