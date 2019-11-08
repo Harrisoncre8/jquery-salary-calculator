@@ -34,8 +34,23 @@ function addEmployee() {
     // run math function
 
     // run append function
+    appendEmployeeInfo();
 }// end addEmployee function
 
 // append inputs to DOM function
 function appendEmployeeInfo() {
+    // empty out table
+    $('#salary-table').empty();
+    // loop through array for values and append them
+    for (employee of employeeArray){
+        $('#salary-table').append(
+            `<tr>
+                <td>${employee.firstName}</td>
+                <td>${employee.lastName}</td>
+                <td>${employee.id}</td>
+                <td>${employee.title}</td>
+                <td>${employee.annualSalary}</td>
+            </tr>`
+        );
+    }// stop looping
 }// end append function
