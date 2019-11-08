@@ -1,6 +1,6 @@
 $(document).ready(onReady);
 
-function onReady(params) {
+function onReady() {
     console.log('Hi from jQuery');
     $('#add-employeeBtn').on('click', addEmployee);
 }
@@ -34,4 +34,8 @@ function addEmployee() {
     // run math function
 
     // run append function
-}// end function
+}// end addEmployee function
+
+// append inputs to DOM function
+function appendEmployeeInfo() {
+}// end append function
