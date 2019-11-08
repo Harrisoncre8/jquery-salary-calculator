@@ -15,7 +15,7 @@ function addEmployee() {
     let firstName = $('#in-firstName').val();
     let lastName = $('#in-lastName').val();
     let id = $('#in-id').val();
-    let title = $('in-title').val();
+    let title = $('#in-title').val();
     let annualSalary = $('#in-annualSalary').val();
     // push to employeeArray
     employeeArray.push( {
@@ -29,7 +29,7 @@ function addEmployee() {
     $('#in-firstName').val('');
     $('#in-lastName').val('');
     $('#in-id').val('');
-    $('in-title').val('');
+    $('#in-title').val('');
     $('#in-annualSalary').val('');
     // run math function
 
