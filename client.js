@@ -8,7 +8,7 @@ function onReady(params) {
 let employeeArray = [];
 
 // take in information and push to employeeArray
-function addEmployee () {
+function addEmployee() {
     // turn inputs to value
     let firstName = $('#in-firstName').val();
     let lastName = $('#in-lastName').val();
