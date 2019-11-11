@@ -65,5 +65,8 @@ function calculateAnnualSalary(array){
     }// end for loop
     $('#monthly-salary').empty();
     $('#monthly-salary').append('Total Monthly: ', monthlyTotal);
+    if (monthlyTotal > 20000){
+        $('#monthly-salary').css('background-color', 'red');
+    }
 }// end calculateAnnualSalary function
 
