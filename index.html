@@ -7,16 +7,17 @@
     <script src="jquery-3.4.1.min.js"></script>
     <script src="client.js"></script>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap-4.3.1-dist/css/bootstrap.min.css">
     <title>Salaray Calculator - Weekend Challenge</title>
 </head>
 <body>
     <header> 
-        <h1> Salary Calculator </h1>
+        <h1 class="bg-success text-white text-center"> Salary Calculator </h1>
     </header>
     <main class="container">
         <section>
             <h2>Add Employee</h2>
-                <form>
+                <form class="form-group">
                     <div>
                         <input id="in-firstName" type="text" placeholder="First Name"/>
                         <input id="in-lastName" type="text" placeholder="Last Name"/>
@@ -25,13 +26,13 @@
                         <input id="in-annualSalary" type="text" placeholder="Annual Salary"/>
                     </div>
                     <div>
-                        <button id="add-employeeBtn">Submit</button>
+                        <button class="btn btn-success" id="add-employeeBtn">Submit</button>
                     </div>
                 </form>
         </section>
         <section>
             <h2>Employees</h2>
-            <table>
+            <table class="table">
                 <thead>
                     <tr> <th>First Name</th> <th>Last Name</th> <th>ID</th>
                         <th>Title</th> <th>Annual Salary</th>                    

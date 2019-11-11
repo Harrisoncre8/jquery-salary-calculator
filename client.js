@@ -4,6 +4,7 @@ $(document).ready(onReady);
 function onReady() {
     console.log('Hi from jQuery');
     $('#add-employeeBtn').on('click', addEmployee);
+    $('#salary-table').on('click', '.delete', removeEmployee);
 }// end ready function
 
 // store employee information here
@@ -51,6 +52,7 @@ function appendEmployeeInfo(array) {
                 <td>${employee.id}</td>
                 <td>${employee.title}</td>
                 <td>${employee.annualSalary}</td>
+                <td> <button class="delete"> Delete </button> </td>
             </tr>`
         );
     }// stop looping
@@ -69,4 +71,10 @@ function calculateAnnualSalary(array){
         $('#monthly-salary').css('background-color', 'red');
     }
 }// end calculateAnnualSalary function
+
+// removes employee
+function removeEmployee() {
+    let button = $(this);
+    button.parent().parent().remove();
+}// end removeEmployee function
 
