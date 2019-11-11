@@ -1,9 +1,10 @@
 $(document).ready(onReady);
 
+// fires when document is ready
 function onReady() {
     console.log('Hi from jQuery');
     $('#add-employeeBtn').on('click', addEmployee);
-}
+}// end ready function
 
 // store employee information here
 let employeeArray = [];
@@ -32,7 +33,7 @@ function addEmployee() {
     $('#in-title').val('');
     $('#in-annualSalary').val('');
     // run math function
-
+    calculateAnnualSalary(employeeArray);
     // run append function
     appendEmployeeInfo(employeeArray);
 }// end addEmployee function
@@ -54,3 +55,15 @@ function appendEmployeeInfo(array) {
         );
     }// stop looping
 }// end append function
+
+// calculates annual salary
+function calculateAnnualSalary(array){
+    let monthlyTotal = 0;
+    for ( let i=0; i<array.length; i++){
+        monthlyTotal += Number(array[i].annualSalary)
+        console.log(monthlyTotal);
+    }// end for loop
+    $('#monthly-salary').empty();
+    $('#monthly-salary').append('Total Monthly: ', monthlyTotal);
+}// end calculateAnnualSalary function
+
